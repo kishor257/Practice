@@ -1,10 +1,5 @@
 <suite name="Suite" parallel="tests">
   <test name="Test">
-  	<groups>
-  		<run>
-  			<include name="smoke"/>
-  		</run>
-  	</groups>
    <parameter name="ip" value="192.168.0.2"/>
    <parameter name="browser" value="chrome"/>
     <packages>
