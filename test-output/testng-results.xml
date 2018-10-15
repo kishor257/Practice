@@ -5,15 +5,15 @@
       <![CDATA[TestName:testA Status:PASS]]>
     </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="36225" started-at="2018-10-15T02:13:49Z" finished-at="2018-10-15T02:14:25Z">
+  <suite name="Suite" duration-ms="5600" started-at="2018-10-15T02:28:23Z" finished-at="2018-10-15T02:28:29Z">
     <groups>
       <group name="smoke">
-        <method signature="OrangeTC1.testA()[pri:1, instance:script.OrangeTC1@29774679]" name="testA" class="script.OrangeTC1"/>
+        <method signature="OrangeTC1.testA()[pri:1, instance:script.OrangeTC1@4501b7af]" name="testA" class="script.OrangeTC1"/>
       </group> <!-- smoke -->
     </groups>
-    <test name="Test" duration-ms="36225" started-at="2018-10-15T02:13:49Z" finished-at="2018-10-15T02:14:25Z">
+    <test name="Test" duration-ms="5600" started-at="2018-10-15T02:28:23Z" finished-at="2018-10-15T02:28:29Z">
       <class name="script.OrangeTC1">
-        <test-method status="PASS" signature="openApp(java.lang.String, java.lang.String)[pri:0, instance:script.OrangeTC1@29774679]" name="openApp" is-config="true" duration-ms="26785" started-at="2018-10-15T07:43:49Z" finished-at="2018-10-15T07:44:15Z">
+        <test-method status="PASS" signature="openApp(java.lang.String, java.lang.String)[pri:0, instance:script.OrangeTC1@4501b7af]" name="openApp" is-config="true" duration-ms="4372" started-at="2018-10-15T07:58:23Z" finished-at="2018-10-15T07:58:28Z">
           <params>
             <param index="0">
               <value>
@@ -29,15 +29,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApp -->
-        <test-method status="PASS" signature="testA()[pri:1, instance:script.OrangeTC1@29774679]" name="testA" duration-ms="9323" started-at="2018-10-15T07:44:15Z" finished-at="2018-10-15T07:44:25Z">
+        <test-method status="PASS" signature="testA()[pri:1, instance:script.OrangeTC1@4501b7af]" name="testA" duration-ms="1116" started-at="2018-10-15T07:58:28Z" finished-at="2018-10-15T07:58:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testA -->
-        <test-method status="PASS" signature="closeApp(org.testng.ITestResult)[pri:0, instance:script.OrangeTC1@29774679]" name="closeApp" is-config="true" duration-ms="101" started-at="2018-10-15T07:44:25Z" finished-at="2018-10-15T07:44:25Z">
+        <test-method status="PASS" signature="closeApp(org.testng.ITestResult)[pri:0, instance:script.OrangeTC1@4501b7af]" name="closeApp" is-config="true" duration-ms="90" started-at="2018-10-15T07:58:29Z" finished-at="2018-10-15T07:58:29Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testA status=SUCCESS method=OrangeTC1.testA()[pri:1, instance:script.OrangeTC1@29774679] output={null}]]]>
+                <![CDATA[[TestResult name=testA status=SUCCESS method=OrangeTC1.testA()[pri:1, instance:script.OrangeTC1@4501b7af] output={null}]]]>
               </value>
             </param>
           </params>
