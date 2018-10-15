@@ -5,7 +5,7 @@
   			<include name="smoke"/>
   		</run>
   	</groups>
-   <parameter name="ip" value="localhost"/>
+   <parameter name="ip" value="192.168.0.2"/>
    <parameter name="browser" value="chrome"/>
     <packages>
       <package name="script"/>
