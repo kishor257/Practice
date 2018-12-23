@@ -6,11 +6,15 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+@Listeners(Result.class)
 public abstract class BaseTest implements IAutoConst {
+	public static int passed=0,failed=0;
 	static{
 		System.setProperty(CHROME_KEY,CHROME_VALUE);
 		System.setProperty(GECKO_KEY,GECKO_VALUE);
@@ -36,12 +40,22 @@ public abstract class BaseTest implements IAutoConst {
 		String name=result.getName();
 		int status = result.getStatus();
 		if(status==2){
+			//i added this line from ajit sir framework to capture screenshots of failed test cases
+			failed++;
+			Utility.captureScreenshot(driver, result.getName());
 			Reporter.log("TestName:"+name +" Status:FAIL",true);
 		}
 		else{
+			passed++;
 			Reporter.log("TestName:"+name +" Status:PASS",true);
 		}
 		driver.quit();
+	}
+	@AfterSuite
+	public void print(){
+		Reporter.log("Pass:"+passed,true);
+		Reporter.log("Fail:"+failed,true);
+		Utility.writeResultToXL(REPORT_PATH,"sheet1", passed, failed);
 	}
 }
 

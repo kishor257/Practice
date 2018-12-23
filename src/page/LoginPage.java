@@ -4,22 +4,34 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class LoginPage {
-	private WebDriver driver;
 	
-	@FindBy(id="txtUsername")
+	@FindBy(id="username")
 	private WebElement unTB;
 	
-	@FindBy(id="txtPassword")
+	@FindBy(name="pwd")
 	private WebElement pwTB;
 	
-	@FindBy(id="btnLogin")
+	@FindBy(xpath="//div[.='Login ']")
 	private WebElement loginBTN;
 	
+	@FindBy(xpath="//span[contains(.,'invalid')]")
+	private WebElement errMsg;
+	
 	public LoginPage(WebDriver driver){
-		this.driver=driver;
 		PageFactory.initElements(driver,this);
+	}
+	
+	public void verifyErrMsgIsDisplayed(){
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Assert.assertTrue(errMsg.isDisplayed());
 	}
 	
 	public void setUserName(String un){
@@ -33,6 +45,4 @@ public class LoginPage {
 	public void clickLogin(){
 		loginBTN.click();
 	}
-	
-	
 }

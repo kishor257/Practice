@@ -6,4 +6,7 @@ public interface IAutoConst {
 	String GECKO_KEY="webdriver.gecko.driver";
 	String GECKO_VALUE="./driver/geckodriver.exe";
 	String CONFIG_PATH="./input/config.properties";
+	String XL_PATH="./data/input.xlsx";
+	String SUMMARY_PATH="./result/summary.xlsx";
+	String REPORT_PATH="./result/report.xlsx";
 }
